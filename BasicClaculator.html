@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        function sum() {
+            let num1 = parseFloat(document.getElementById("num1").value) || 0;
+            let num2 = parseFloat(document.getElementById("num2").value) || 0;
+            document.getElementById("result1").value = num1 + num2;
+        }
+
+        function sub() {
+            let num1 = parseFloat(document.getElementById("num1").value) || 0;
+            let num2 = parseFloat(document.getElementById("num2").value) || 0;
+            document.getElementById("result1").value = num1 - num2;
+        }
+
+        function mul() {
+            let num1 = parseFloat(document.getElementById("num1").value) || 0;
+            let num2 = parseFloat(document.getElementById("num2").value) || 0;
+            document.getElementById("result1").value = num1 * num2;
+        }
+
+        function div() {
+            let num1 = parseFloat(document.getElementById("num1").value) || 0;
+            let num2 = parseFloat(document.getElementById("num2").value) || 0;
+            if (num2 === 0) {
+                document.getElementById("result1").value = "Cannot divide by zero";
+            } else {
+                document.getElementById("result1").value = num1 / num2;
+            }
+        }
+    </script>
+</head>
+<body>
+    num1: <input type="number" id="num1"> 
+    num2: <input type="number" id="num2"> 
+    result: <input type="text" id="result1" readonly> <br>
+    <button onclick="sum()">SUM</button>
+    <button onclick="sub()">SUB</button>
+    <button onclick="mul()">MUL</button>
+    <button onclick="div()">DIV</button>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function generateOTP() {
+            let otp = Math.floor(1000 + Math.random() * 9000);
+            document.getElementById("otp").innerText = otp;
+        }
+
+        window.onload = generateOTP;
+    </script>
+</head>
+<body>
+    <p id="otp"></p>
+    <button onclick="generateOTP()">Generate OTP</button>
+    <button onclick="location.reload();">Refresh Page</button> 
+</body>
+</html>

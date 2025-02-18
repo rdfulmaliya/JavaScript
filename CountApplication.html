@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountAppication</title>
+    <script>
+        let count = 0; 
+        function Increment(){
+            if(count<10){
+                count++;
+                document.getElementById("ans").innerText = count;
+            }
+            else{
+                alert("Maximum limit reached");
+            }
+        }
+        function Decrement(){
+            if (count > 0) { 
+                count--;
+                document.getElementById("ans").innerText = count;
+            } else {
+                alert("Minimum limit reached!"); 
+            }
+        }
+    </script>
+</head>
+<body>
+    <p id="ans"></p>
+    <input type="button" onclick="Increment()" value="IncrementNo">
+    <input type="button" onclick="Decrement()" value="DecrementNo">
+</body>
+</html>
